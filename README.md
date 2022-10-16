@@ -26,8 +26,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/spaziutempu/order-component](https://github.com/spaziutempu/order-component)
+- Live Site URL: [https://musical-narwhal-981210.netlify.app](https://musical-narwhal-981210.netlify.app)
 
 ## My process
 
