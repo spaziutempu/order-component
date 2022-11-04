@@ -31,10 +31,10 @@ Users should be able to:
 
 ## My process
 
-- Analyzed the layout
-- Wrote the HTML with clear class
-- Stylized every elements to match with the mockup
-- added some animations
+- Analyze the layout
+- Write the HTML with clear class
+- Stylize every elements to match with the mockup
+- add some animations
 
 ### Built with
 

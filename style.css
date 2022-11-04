@@ -7,19 +7,10 @@
 }
 
 :root {
-  /***Color***/
-  /* Primary */
-  --paleBlue: hsl(225, 100%, 94%);
-  --brightBlue: hsl(245, 75%, 52%);
-  /* Neutral */
-  --veryPaleBlue: hsl(225, 100%, 98%);
-  --desaturatedBlue: hsl(224, 23%, 55%);
-  --darkBlue: hsl(223, 47%, 23%);
-
   /* Font-Weight */
-  --initialW: 500;
-  --boldW: 700;
-  --xtraBoldW: 900;
+  --initialWeight: 500;
+  --boldWeight: 700;
+  --xtraBoldWeight: 900;
 
   /* Width */
   --widthInitial: 85%;
@@ -30,6 +21,8 @@
 body {
   margin: 0;
   min-height: 100vh;
+  min-width: 350;
+
   background-image: url(./images/pattern-background-desktop.svg);
   background-color: hsl(225, 100%, 94%);
   background-repeat: repeat-x;
@@ -39,47 +32,62 @@ body {
   justify-content: center;
 
   font-family: "Red Hat Display", sans-serif;
-  font-weight: var(--initialW);
+  font-weight: var(--initialWeight);
 }
 
 .container {
+  display: flex;
+  flex-direction: column;
+
   max-width: 375px;
+  width: 90%;
+  min-width: 330px;
   background: white;
 
   border-radius: 10px;
   box-shadow: 0px 10px 5px hsl(225deg 100% 90%);
-  display: flex;
-  flex-direction: column;
 }
 
 .illustration_hero {
+  display: block;
   padding: 0;
   margin: 0;
-  display: block;
+
   width: 100%;
+
   border-radius: 10px 10px 0 0;
 }
 
 .card {
   margin: auto;
+  width: 90%;
+
   display: flex;
   flex-direction: column;
+
   justify-content: center;
   align-items: center;
+
   text-align: center;
-  width: 90%;
 }
 
 .card_title {
-  margin-top: 1em;
-  font-weight: 900;
+  margin: 1em auto 0.75em;
   font-size: 1.5em;
+  font-weight: var(--xtraBoldWeight);
 }
 
 .card_paragraph {
-  color: var(--desaturatedBlue);
-  width: 85%;
   margin: 0;
+
+  color: hsl(224, 23%, 55%);
+}
+
+.card_title,
+.card_component,
+.card_paragraph,
+.card_btn {
+  width: 85%;
 }
 
 /***********
@@ -87,18 +95,20 @@ CARD COMPONENT
 ************/
 
 .card_component {
-  background: var(--veryPaleBlue);
-  width: 85%;
+  margin: 1.5em 0;
+  padding: 0.7em 0;
+
+  background: hsl(225, 100%, 98%);
+
   display: flex;
   justify-content: start;
   align-items: center;
-  margin: 1.5em 0;
+
   border-radius: 10px;
-  padding: 0.7em 0;
 }
 
 .card_component-icon {
-  margin: 0 0.8em 0 0.8em;
+  margin: 0 0.8em;
 }
 
 .card_component_plan p {
@@ -116,18 +126,20 @@ CARD COMPONENT
 }
 
 .card_component-change {
-  font-weight: var(--boldW);
-  color: var(--brightBlue);
+  margin-right: 1.3em;
   margin-left: auto;
+
+  font-weight: var(--boldWeight);
+  color: hsl(245, 75%, 52%);
+
   transform: scale(1);
   transition: all 250ms;
-  margin-right: 1.3em;
 }
 
 .card_component-change:hover,
 .card_component-change:focus,
 .card_component-change:hover {
-  color: var(--darkBlue);
+  color: hsl(223, 47%, 23%);
   text-decoration: none;
 }
 
@@ -140,35 +152,38 @@ Btn PART
 ***********************/
 
 .card_btn {
-  width: 85%;
+  margin-bottom: 0.5em;
 
   display: flex;
   flex-direction: column;
   justify-content: stretch;
   align-items: stretch;
-  margin-bottom: 0.5em;
 }
 
 .card_btn-primary {
-  border-radius: 10px;
-  border: none;
+  margin-bottom: 0.8em;
+  padding: 0.6rem;
+
   background: hsl(245, 75%, 52%);
   color: hsl(225, 100%, 98%);
 
-  font-family: "Red Hat Display", sans-serif;
-  font-weight: 700;
+  border: none;
+  border-radius: 10px;
 
-  padding: 0.6rem;
-  margin-bottom: 0.8em;
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: var(--boldWeight);
+
   cursor: pointer;
   transition: all 250ms;
   transform: scale(1);
+
   box-shadow: 0px 13px 8px hsl(225deg 100% 90%);
 }
 
 .card_btn-inverse {
   color: hsl(224, 23%, 55%);
   background: none;
+
   transition: all 250ms;
   box-shadow: 0px 0px 0px #000;
 }
